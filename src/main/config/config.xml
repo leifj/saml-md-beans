@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xb:config
+ xmlns:xb="http://xml.apache.org/xmlbeans/2004/02/xbean/config">
+   <xb:namespace uri="urn:oasis:names:tc:SAML:2.0:assertion">
+     <xb:package>org.oasis.saml.assertion</xb:package>
+   </xb:namespace>
+   <xb:namespace uri="urn:oasis:names:tc:SAML:2.0:metadata">
+     <xb:package>org.oasis.saml.metadata</xb:package>
+   </xb:namespace>
+   <xb:namespace uri="http://www.w3.org/2001/04/xmlenc#">
+     <xb:package>org.w3c.xmlenc</xb:package>
+   </xb:namespace>
+   <xb:namespace uri="http://www.w3.org/2000/09/xmldsig#">
+     <xb:package>org.w3c.xmldsig</xb:package>
+   </xb:namespace>
+   <xb:namespace uri="urn:oasis:names:tc:SAML:metadata:attribute">
+     <xb:package>org.oasis.saml.metadata.attribute</xb:package>
+   </xb:namespace>
+</xb:config>

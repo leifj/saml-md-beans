@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>se.swami.saml.metadata</groupId>
+  <artifactId>saml-md-beans</artifactId>
+  <name>SAML Metadata 2.0 Beans</name>
+  <version>1.0-SNAPSHOT</version>
+  <url>http://devel.it.su.se</url>
+  <developers>
+    <developer>
+      <id>leifj</id>
+      <name>Leif Johansson</name>
+      <email>leifj@it.su.se</email>
+      <organization>Stockholm university</organization>
+      <timezone>MET</timezone>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:svn:svn://anonsvn.it.su.se/saml-md-beans</connection>
+    <developerConnection>scm:svn:svn+ssh://svn.it.su.se/afs/su.se/services/svn/saml-md-beans</developerConnection>
+  </scm>
+  <organization>
+    <name>Stockholm university</name>
+    <url>http://www.su.se</url>
+  </organization>
+  <build>
+    <defaultGoal>install</defaultGoal>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>xmlbeans-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>xmlbeans</goal>
+            </goals>
+          </execution>
+        </executions>
+        <inherited>true</inherited>
+        <configuration>
+          <schemaDirectory>src/main/xsd</schemaDirectory>
+          <xmlConfigs>
+            <xmlConfig implementation="java.io.File">src/main/config/config.xml</xmlConfig>
+          </xmlConfigs>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <repositories>
+    <repository>
+      <id>su-mvn</id>
+      <name>SU Maven2</name>
+      <url>http://maven.it.su.se/it.su.se/maven2</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+    <dependency>
+      <groupId>xmlbeans</groupId>
+      <artifactId>xmlbeans</artifactId>
+      <version>2.3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>se.su.it.commons</groupId>
+      <artifactId>su-commons</artifactId>
+      <version>1.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>ssh-repository</id>
+      <url>scpexe://svn.it.su.se/afs/su.se/services/maven/it.su.se/maven2</url>
+    </repository>
+    <site>
+      <id>website</id>
+      <url>scpexe://svn.it.su.se/afs/su.se/services/www/hosts/devel.it.su.se/pages/saml-md-beans</url>
+    </site>
+  </distributionManagement>
+</project>
