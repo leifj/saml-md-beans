@@ -66,9 +66,9 @@
       <version>3.8.1</version>
     </dependency>
     <dependency>
-      <groupId>xmlbeans</groupId>
+      <groupId>org.apache.xmlbeans</groupId>
       <artifactId>xmlbeans</artifactId>
-      <version>2.3.0</version>
+      <version>2.4.0</version>
     </dependency>
     <dependency>
       <groupId>se.su.it.commons</groupId>
