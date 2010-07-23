@@ -81,11 +81,7 @@
   <distributionManagement>
     <repository>
       <id>ssh-repository</id>
-      <url>scpexe://svn.it.su.se/afs/su.se/services/maven/it.su.se/maven2</url>
+      <url>scpexe://maven@code.mnt.se/home/maven/2</url>
     </repository>
-    <site>
-      <id>website</id>
-      <url>scpexe://svn.it.su.se/afs/su.se/services/www/hosts/devel.it.su.se/pages/saml-md-beans</url>
-    </site>
   </distributionManagement>
 </project>
