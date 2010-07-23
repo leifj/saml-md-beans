@@ -72,11 +72,6 @@
       <artifactId>xmlbeans</artifactId>
       <version>2.4.0</version>
     </dependency>
-    <dependency>
-      <groupId>se.su.it.commons</groupId>
-      <artifactId>su-commons</artifactId>
-      <version>1.1-SNAPSHOT</version>
-    </dependency>
   </dependencies>
   <distributionManagement>
     <repository>

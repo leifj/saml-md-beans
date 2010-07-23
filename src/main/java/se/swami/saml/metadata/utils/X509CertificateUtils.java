@@ -12,16 +12,29 @@ import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.util.Date;
 
-import org.apache.commons.collections.Predicate;
 import org.oasis.saml.metadata.EntityDescriptorType;
 import org.oasis.saml.metadata.KeyDescriptorType;
 import org.oasis.saml.metadata.RoleDescriptorType;
 import org.w3c.xmldsig.KeyInfoType;
 import org.w3c.xmldsig.X509DataType;
 
-import se.su.it.commons.ArrayUtils;
-
 public class X509CertificateUtils {
+	
+	// A mini-version of su-commons:ArrayUtils
+	private interface Predicate {
+		public boolean evaluate(Object o);
+	}
+	
+	private static Object find(Object[] a, Predicate p)
+    {
+            for (int i = 0; i < a.length; i++)
+            {
+                    if (p.evaluate(a[i]))
+                            return a[i];
+            }
+            
+            return null;
+    }
 	
 	public static KeyDescriptorType getKeyDescriptor(RoleDescriptorType role, final Enum<?> use)
 	{
@@ -34,7 +47,7 @@ public class X509CertificateUtils {
 			}
 		} else {
 			final KeyDescriptorType keyDescriptor[] = role.getKeyDescriptorArray();
-			return (KeyDescriptorType)ArrayUtils.find(keyDescriptor,new Predicate() {
+			return (KeyDescriptorType)find(keyDescriptor,new Predicate() {
 				public boolean evaluate(Object object) {
 					return ((KeyDescriptorType)object).getUse().equals(use);
 				}
