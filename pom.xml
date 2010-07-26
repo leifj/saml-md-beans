@@ -6,23 +6,18 @@
   <artifactId>saml-md-beans</artifactId>
   <name>SAML Metadata 2.0 Beans</name>
   <version>1.0-SNAPSHOT</version>
-  <url>http://devel.it.su.se</url>
   <developers>
     <developer>
       <id>leifj</id>
       <name>Leif Johansson</name>
-      <email>leifj@it.su.se</email>
-      <organization>Stockholm university</organization>
+      <email>leifj@sunet.se</email>
+      <organization>SUNET</organization>
       <timezone>MET</timezone>
     </developer>
   </developers>
-  <scm>
-    <connection>scm:svn:svn://anonsvn.it.su.se/saml-md-beans</connection>
-    <developerConnection>scm:svn:svn+ssh://svn.it.su.se/afs/su.se/services/svn/saml-md-beans</developerConnection>
-  </scm>
   <organization>
-    <name>Stockholm university</name>
-    <url>http://www.su.se</url>
+    <name>SUNET</name>
+    <url>http://www.sunet.se</url>
   </organization>
   <build>
     <defaultGoal>install</defaultGoal>
@@ -54,13 +49,6 @@
       </plugin>
     </plugins>
   </build>
-  <repositories>
-    <repository>
-      <id>su-mvn</id>
-      <name>SU Maven2</name>
-      <url>http://maven.it.su.se/it.su.se/maven2</url>
-    </repository>
-  </repositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
