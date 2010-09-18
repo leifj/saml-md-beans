@@ -1,0 +1,47 @@
+<schema targetNamespace="urn:oasis:names:tc:SAML:2.0:metadata:ui"
+	    xmlns:mdui="urn:oasis:names:tc:SAML:2.0:metadata:ui"
+        xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="unqualified"
+        attributeFormDefault="unqualified"
+        blockDefault="substitution"
+        version="2.0" >
+
+    <import namespace="urn:oasis:names:tc:SAML:2.0:assertion" schemaLocation="saml-schema-assertion-2.0.xsd"/>
+    <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+
+    <annotation>
+	    <documentation>
+			Document identifier: TODO
+            Location: TODO
+            Revision history: TODO
+		</documentation>
+	</annotation>
+
+    <element name="DisplayName" type="md:localizedNameType" />
+
+    <element name="Description" type="md:localizedNameType" />
+
+    <element name="Logo" type="mdui:LogoType" />
+	<complexType name="LogoType">
+	   <simpleContent>
+	      <extension base="string">
+	         <attribute ref="xml:lang" use="optional"/>
+	         <attribute name="href" type="anyURI" use="optional"/>
+	         <attribute name="height" type="positiveInteger" use="optional" />
+	         <attribute name="width" type="positiveInteger" use="optional" />
+	      </extension>
+	   </simpleContent>
+	</complexType>
+	
+	<element name="InformationURL" type="md:localizedURIType" />
+	
+	<element name="PrivacyStatementURL" type="md:localizedURIType" />
+	
+	<element name="IPHint" type="string" />
+	
+	<element name="DomainHint" type="string" />
+	
+	<element name="GeolocationHint" type="string" />
+	
+</schema>
